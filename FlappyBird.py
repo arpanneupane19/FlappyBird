@@ -44,7 +44,7 @@ pipeSurface = pygame.image.load('assets/pipe-green.png').convert()
 pipeList = [] 
 spawnPipe = pygame.USEREVENT
 pygame.time.set_timer(spawnPipe, 800)
-pipeHeight = [346, 366, 386]
+pipeHeight = [316,326,336,346,356,366,376,386]
 
 gameOverImg = pygame.image.load('assets/message.png').convert_alpha()
 gameOverRect = gameOverImg.get_rect(center = (144, 256))
@@ -193,10 +193,5 @@ while True:
 
     pygame.display.update()
     clock.tick(100)
-
-
-
-
-
 
 
