@@ -4,10 +4,13 @@ import random
 pygame.mixer.pre_init(frequency = 44100, size = -16, channels = 1, buffer = 512)
 pygame.init()
 
+birdIcon = pygame.image.load('assets/bluebird-midflap.png')
+
 width = 576 
 height = 1024
 win = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Flappy Bird')
+pygame.display.set_icon(birdIcon)
 clock = pygame.time.Clock()
 gameFont = pygame.font.Font("04B_19.ttf",40)
 
@@ -188,7 +191,7 @@ while True:
         groundX = 0
 
     pygame.display.update()
-    clock.tick()
+    clock.tick(100)
 
 
 
