@@ -1,6 +1,6 @@
 import pygame
 import random
-
+import sys
 
 pygame.mixer.pre_init(frequency = 44100, size = -16, channels = 1, buffer = 512)
 pygame.init()
@@ -133,8 +133,7 @@ def updateScore(score, highScore):
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit()
-
+            sys.exit()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE and gameRunning == True:
                 birdMovement = 0
@@ -147,7 +146,7 @@ while True:
                 birdMovement = 0
                 score = 0
             if event.key == pygame.K_q:
-                pygame.quit()
+                sys.exit()
             
         if event.type == spawnPipe:
             pipeList.extend(createPipe())
